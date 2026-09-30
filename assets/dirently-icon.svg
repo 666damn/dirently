@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Dirently</title>
+  <defs>
+    <linearGradient id="dirently-d" x1="70" y1="64" x2="184" y2="192" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#25ABFF"/>
+      <stop offset="1" stop-color="#FF1958"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="128" fill="#1A1F27"/>
+  <path fill="url(#dirently-d)" fill-rule="evenodd"
+        d="M70 64 H120 A64 64 0 0 1 120 192 H70 Z M98 90 H120 A38 38 0 0 1 120 166 H98 Z"/>
+</svg>

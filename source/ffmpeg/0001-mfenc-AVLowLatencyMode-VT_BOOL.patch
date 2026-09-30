@@ -1,0 +1,27 @@
+From: Dirently
+Date: 2026-09-29
+Subject: avcodec/mfenc: set CODECAPI_AVLowLatencyMode as a VT_BOOL
+
+CODECAPI_AVLowLatencyMode is a Boolean (VT_BOOL). Microsoft's software
+H.264 encoder MFT (Windows' Media Foundation, the encoder h264_mf opens with
+hw_encoding=0) refuses the VT_UI4 that mfenc sets with E_INVALIDARG and then
+holds 16 frames before its first packet: about 270 ms at 60 frames a second.
+As a VT_BOOL it takes it and gives one packet for every frame.
+
+Applied by scripts/build-ffmpeg-windows.sh to the FFmpeg 8.1.3 release.
+---
+--- a/libavcodec/mfenc.c
++++ b/libavcodec/mfenc.c
+@@ -877,8 +877,11 @@
+         if (c->opt_enc_scenario >= 0)
+             ICodecAPI_SetValue(c->codec_api, &ff_CODECAPI_AVScenarioInfo, FF_VAL_VT_UI4(c->opt_enc_scenario));
+ 
++        /* Changed for Dirently, 2026-09-29: CODECAPI_AVLowLatencyMode is a
++         * VT_BOOL. Microsoft's H.264 encoder MFT refuses it as VT_UI4
++         * (E_INVALIDARG) and then holds 16 frames before its first packet. */
+         if (avctx->flags & AV_CODEC_FLAG_LOW_DELAY)
+-            ICodecAPI_SetValue(c->codec_api, &ff_CODECAPI_AVLowLatencyMode, FF_VAL_VT_UI4(1));
++            ICodecAPI_SetValue(c->codec_api, &ff_CODECAPI_AVLowLatencyMode, FF_VAL_VT_BOOL(VARIANT_TRUE));
+     }
+ 
+     return 0;

@@ -1,0 +1,58 @@
+Dirently Windows FFmpeg: minimal LGPL build
+
+Built by scripts/build-ffmpeg-windows.ps1 (scripts/build-ffmpeg-windows.sh) from the pinned
+sources in scripts/ffmpeg-windows-sources.json. License of the DLLs: GNU LGPL 2.1 or later
+(no --enable-gpl, --enable-nonfree or --enable-version3). Source offer and URLs:
+third_party/SOURCE-MANIFEST.md.
+
+Sources (SHA-256 of the downloaded archive):
+  FFmpeg 8.1.3 [LGPL-2.1-or-later] - libavcodec, libavutil, libswresample and libswscale (the shipped DLLs)
+    https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz
+    sha256 7138d28c96d9d3e3af4ee3d8cad72741f8ffb40da90c1112235dea3ecd3178a3
+  Opus 1.6.1 [BSD-3-Clause] - static library inside avcodec-62.dll (the libopus encoder)
+    https://downloads.xiph.org/releases/opus/opus-1.6.1.tar.gz
+    sha256 6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1
+  libvpl 2.17.0 [MIT] - Intel VPL dispatcher, static library inside avcodec-62.dll and avutil-60.dll (QSV)
+    https://github.com/intel/libvpl/archive/refs/tags/v2.17.0.tar.gz
+    sha256 4de3e2faf1e8307fb282e4a43f443191810f6a6b0a484fffa7995ba1c814c6ec
+  AMF headers 1.5.2 [MIT] - headers only (h264_amf, hevc_amf); the AMF runtime comes with the AMD driver
+    https://github.com/GPUOpen-LibrariesAndSDKs/AMF/releases/download/v1.5.2/AMF-headers-v1.5.2.tar.gz
+    sha256 d3c12eb324edf05e214608b6a395a51dd95770ed9d45520185d6c3a206811c99
+  nv-codec-headers 13.0.19.1 [MIT] - headers only (h264_nvenc, hevc_nvenc); NVENC comes with the NVIDIA driver
+    https://github.com/FFmpeg/nv-codec-headers/releases/download/n13.0.19.1/nv-codec-headers-13.0.19.1.tar.gz
+    sha256 eab9d02d461035a4baded23d4f2e2834e5b17934820b79cea45baaf0c85383eb
+  NASM 2.16.03 [BSD-2-Clause] - build tool (FFmpeg's x86 assembly); not shipped
+    https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/nasm-2.16.03-win64.zip
+    sha256 3ee4782247bcb874378d02f7eab4e294a84d3d15f3f6ee2de2f47a46aa7226e6
+
+Changes to the FFmpeg release (applied with patch -p1, in this order; each file says what and why):
+  scripts/ffmpeg-patches/0001-mfenc-AVLowLatencyMode-VT_BOOL.patch  sha256 99139548adbb024c7d5e2de100c041a725671c771c53fa2990ff535afb2f4c06
+
+Toolchain: w64devkit 2.9.1 (gcc.exe (GCC) 16.2.0), msvcrt, NASM 2.16.03, CMake and Ninja from w64devkit
+Environment for configure (kept out of the configure line, which is compiled into avutil):
+  CPATH=<deps>/include  CFLAGS=-ffile-prefix-map=<work>=/build  LDFLAGS=-Wl,--no-insert-timestamp
+  PKG_CONFIG_PATH=PKG_CONFIG_LIBDIR=<deps>/lib/pkgconfig (Opus, libvpl, ffnvcodec)
+Opus: CMake Release, static, OPUS_FORTIFY_SOURCE=OFF, OPUS_STACK_PROTECTOR=OFF
+libvpl: CMake Release, static dispatcher, no tools, examples or tests
+SOURCE_DATE_EPOCH=1789951930 for the build and the strip (FFmpeg 8.1.3's release signature, 2026-09-21T00:52:10Z)
+After install: strip --strip-all on each DLL
+
+configure line:
+  ./configure --prefix=/ffmpeg --target-os=mingw32 --arch=x86_64 --enable-shared --disable-static --disable-programs --disable-doc --disable-debug --disable-network --disable-avdevice --disable-avformat --disable-avfilter --disable-everything --disable-autodetect --enable-w32threads --enable-d3d11va --enable-dxva2 --enable-amf --enable-ffnvcodec --enable-nvenc --enable-libvpl --enable-mediafoundation --enable-libopus --enable-encoder=h264_amf,hevc_amf,h264_nvenc,hevc_nvenc,h264_qsv,hevc_qsv,h264_mf,hevc_mf,libopus --enable-decoder=h264,hevc,opus --enable-hwaccel=h264_d3d11va,h264_d3d11va2,hevc_d3d11va,hevc_d3d11va2 --pkg-config=pkg-config --ln_s='cp -f' --pkg-config-flags=--static
+
+Enabled encoders: h264_amf, h264_mf, h264_nvenc, h264_qsv, hevc_amf, hevc_mf, hevc_nvenc, hevc_qsv, libopus
+Enabled decoders: h264, hevc, opus
+Enabled hwaccels: h264_d3d11va, h264_d3d11va2, hevc_d3d11va, hevc_d3d11va2
+Enabled parsers: none
+Enabled bsfs: none
+Libraries and hardware paths: amf=1, cuda=1, d3d11va=1, dxva2=1, ffnvcodec=1, libopus=1, libvpl=1, mediafoundation=1, nvenc=1, qsv=1, w32threads=1, gpl=0, nonfree=0, version3=0
+
+Files (size, SHA-256, imports):
+  bin/avcodec-62.dll  6224384 bytes  5b232bd5337475b502606cd414b887e42493c2a6b8781ba3be100fc74c97d22e
+    imports: ADVAPI32.dll, KERNEL32.dll, msvcrt.dll, ole32.dll, avutil-60.dll, swresample-6.dll
+  bin/avutil-60.dll  2485760 bytes  d24373dd9f3ddde8f86291376ebd4942b22efc8b06710041cd9eb6fe24ffad6c
+    imports: ADVAPI32.dll, bcrypt.dll, KERNEL32.dll, msvcrt.dll, ole32.dll, USER32.dll
+  bin/swresample-6.dll  180224 bytes  11c139add188045e19c2ae2baef395079f5006e1fb1f2566d3dd888cfa16be0a
+    imports: KERNEL32.dll, msvcrt.dll, avutil-60.dll
+  bin/swscale-9.dll  2024448 bytes  c3c976c4260bb7ac186b00597b406f25da3c106dd65cd1119e10fba9ec631bb0
+    imports: KERNEL32.dll, msvcrt.dll, avutil-60.dll
