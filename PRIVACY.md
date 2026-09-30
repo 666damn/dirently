@@ -29,7 +29,7 @@ The coordination service helps your devices find each other and set up a connect
 
 - dirently.com is delivered through Cloudflare, which processes visitors' IP addresses to serve and protect the site.
 - A cookie named `od_visitor` counts visitors without double counting. It lasts 365 days.
-- On your first visit we log the time, your IP address, the referring page (without query parameters), your browser's user agent and your language preference. These records are stored on our server in one file per day. They are not deleted automatically yet. We plan to keep them for 30 days and will update this policy when that is in place.
+- On your first visit we log the time, your IP address, the referring page (without query parameters), your browser's user agent and your language preference. We keep these records for 30 days. Older ones are deleted automatically, checked every hour, oldest first.
 - The site loads no third-party analytics, ads or fonts.
 
 ## 4. What stays on your device
