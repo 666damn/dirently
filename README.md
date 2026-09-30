@@ -3,6 +3,11 @@
   <h1>Dirently</h1>
   <p><strong>Low-latency remote desktop that connects your devices directly.</strong><br>No account. The picture never takes a detour through our servers.</p>
   <p>
+    <a href="../../releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/666damn/dirently?label=release&color=25abff"></a>
+    <img alt="platforms" src="https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Android-2ed9ff">
+    <img alt="public beta" src="https://img.shields.io/badge/public%20beta-free-ff1958">
+  </p>
+  <p>
     <a href="README.zh-CN.md">简体中文</a>
     ·
     <a href="README.md">English</a>
@@ -13,21 +18,23 @@
 
 ## Download
 
-Get the latest version from **[Releases](../../releases/latest)**.
+Pick your device below, or see all versions on **[Releases](../../releases/latest)**. Where GitHub is slow or blocked (for example in mainland China), use the **mirror** link: it is the same file.
 
-| Platform | File | Notes |
+| Platform | Download | Notes |
 |---|---|---|
-| Windows 10 / 11 (x64) | `Dirently-Setup-<version>.exe` | Can share this PC and control other devices. |
-| macOS 13 or later (Apple Silicon) | `Dirently-<version>-arm64.pkg` | Can share this Mac and control other devices. Signed and notarized by Apple. |
-| Android 12 or later | `Dirently-<version>.apk` | Controls your computers; it does not share the phone. |
-| iOS / iPadOS | coming later | |
+| Windows 10 / 11 (x64) | [Dirently-Setup-0.2.62.exe](../../releases/download/v0.2.62/Dirently-Setup-0.2.62.exe) · [mirror](https://download.dirently.com/v0.2.62/Dirently-Setup-0.2.62.exe) | Can share this PC and control other devices. |
+| macOS 13 or later (Apple Silicon) | [Dirently-0.2.62-arm64.pkg](../../releases/download/v0.2.62/Dirently-0.2.62-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.62/Dirently-0.2.62-arm64.pkg) | Can share this Mac and control other devices. Signed and notarized by Apple. |
+| Android 12 or later | [Dirently-0.2.62.apk](../../releases/download/v0.2.62/Dirently-0.2.62.apk) · [mirror](https://download.dirently.com/v0.2.62/Dirently-0.2.62.apk) | Controls your computers; it does not share the phone. |
+| iPhone / iPad (iOS / iPadOS 17 or later) | Coming soon to the App Store | Controls your computers. |
 
-Each release includes a `SHA256SUMS` file. To check a download:
+Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.62/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.62/SHA256SUMS)). To check a download:
 
 - **Windows (PowerShell):** `Get-FileHash .\Dirently-Setup-<version>.exe`
 - **macOS:** `shasum -a 256 Dirently-<version>-arm64.pkg`
 
 Compare the result with the matching line in `SHA256SUMS`.
+
+**Edge says the installer "isn't commonly downloaded"?** Hover over the download, click **…** → **Keep**, then **Show more** → **Keep anyway**.
 
 **Windows shows "Windows protected your PC"?** The beta installer is not code-signed yet. Click **More info**, then **Run anyway**.
 

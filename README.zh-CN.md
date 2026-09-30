@@ -3,6 +3,11 @@
   <h1>Dirently</h1>
   <p><strong>低延迟远程桌面，设备之间直接连接。</strong><br>不用注册账号，画面不绕经我们的服务器。</p>
   <p>
+    <a href="../../releases/latest"><img alt="最新版本" src="https://img.shields.io/github/v/release/666damn/dirently?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=25abff"></a>
+    <img alt="平台" src="https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%20%7C%20macOS%20%7C%20Android-2ed9ff">
+    <img alt="公测" src="https://img.shields.io/badge/%E5%85%AC%E6%B5%8B-%E5%85%8D%E8%B4%B9-ff1958">
+  </p>
+  <p>
     <a href="README.zh-CN.md">简体中文</a>
     ·
     <a href="README.md">English</a>
@@ -13,21 +18,23 @@
 
 ## 下载
 
-在 **[Releases](../../releases/latest)** 里下载最新版本。
+按设备选择下载，所有版本见 **[Releases](../../releases/latest)**。GitHub 打不开或很慢时（例如在中国大陆），点 **国内下载**，文件完全相同。
 
-| 平台 | 文件 | 说明 |
+| 平台 | 下载 | 说明 |
 |---|---|---|
-| Windows 10 / 11（x64） | `Dirently-Setup-<版本>.exe` | 可以共享这台电脑，也可以控制其他设备。 |
-| macOS 13 及以上（Apple 芯片） | `Dirently-<版本>-arm64.pkg` | 可以共享这台 Mac，也可以控制其他设备。已经过 Apple 签名和公证。 |
-| Android 12 及以上 | `Dirently-<版本>.apk` | 用来控制电脑，不能共享手机。 |
-| iOS / iPadOS | 稍后推出 | |
+| Windows 10 / 11（x64） | [Dirently-Setup-0.2.62.exe](../../releases/download/v0.2.62/Dirently-Setup-0.2.62.exe) · [国内下载](https://download.dirently.com/v0.2.62/Dirently-Setup-0.2.62.exe) | 可以共享这台电脑，也可以控制其他设备。 |
+| macOS 13 及以上（Apple 芯片） | [Dirently-0.2.62-arm64.pkg](../../releases/download/v0.2.62/Dirently-0.2.62-arm64.pkg) · [国内下载](https://download.dirently.com/v0.2.62/Dirently-0.2.62-arm64.pkg) | 可以共享这台 Mac，也可以控制其他设备。已经过 Apple 签名和公证。 |
+| Android 12 及以上 | [Dirently-0.2.62.apk](../../releases/download/v0.2.62/Dirently-0.2.62.apk) · [国内下载](https://download.dirently.com/v0.2.62/Dirently-0.2.62.apk) | 用来控制电脑，不能共享手机。 |
+| iPhone / iPad（iOS / iPadOS 17 及以上） | 即将上架 App Store | 用来控制电脑。 |
 
-每个版本都附有 `SHA256SUMS`，可以用来核对下载的文件：
+每个版本都附有 [`SHA256SUMS`](../../releases/download/v0.2.62/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.62/SHA256SUMS)），可以用来核对下载的文件：
 
 - **Windows（PowerShell）：**`Get-FileHash .\Dirently-Setup-<版本>.exe`
 - **macOS：**`shasum -a 256 Dirently-<版本>-arm64.pkg`
 
 把算出来的值和 `SHA256SUMS` 里对应的那一行对比。
+
+**Edge 提示"通常不会下载"？** 把鼠标移到这条下载上，点"…"→"保留"，再点"显示更多"→"仍然保留"。
 
 **Windows 提示"Windows 已保护你的电脑"？** 测试版安装包还没有代码签名。点"更多信息"，再点"仍要运行"即可。
 
