@@ -21,7 +21,7 @@ The coordination service helps your devices find each other and set up a connect
 | Status: displays, stream settings, frame rate, bitrate, latency | Pick suitable settings and show them to both sides of a session | In memory while online |
 | Group data: group name, members' device IDs and names, roles, online/offline times, wrong-password counts, bans | Groups, permissions and protection against password guessing | Stored on the server. A group is deleted after all its members have been offline for 3 days; a member's details are removed when they leave |
 | Group password | Check group joins | Stored as a one-way hash plus an encrypted copy. The group admin and we can view the current password, so don't reuse a password from elsewhere |
-| Security and activity logs: time, event, source IP, a pseudonymous device reference | Investigate abuse and faults | Kept in size-limited files (about 8 MB per log). New records overwrite the oldest ones, so there is no fixed number of days |
+| Security and activity logs: time, event, source IP, a pseudonymous device reference | Investigate abuse and faults | 30 days, then deleted automatically (checked every hour) |
 
 **Device names:** on computers, the device name defaults to your computer's name. If it contains your real name, your group and we will see it. You can change it in Settings.
 

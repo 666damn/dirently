@@ -64,7 +64,7 @@ The **[user guide](GUIDE.md)** covers installing on each platform, Mac permissio
 
 - **No account:** no email and no sign-up.
 - **Stored by the service:** only what it needs to introduce your devices, such as device and group identities.
-- **Logs:** the service keeps security logs in size-limited files, and new records overwrite the oldest ones. Details are in the [Privacy Policy](PRIVACY.md).
+- **Logs:** the service's security logs are deleted after **30 days**. Details are in the [Privacy Policy](PRIVACY.md).
 - **Your data:** screen content, audio, keystrokes and files never pass through our servers.
 
 Only connect to your own or your team's computers. Never install Dirently, join a group or turn on sharing because a stranger asked you to.
