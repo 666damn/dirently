@@ -196,7 +196,7 @@ to **Virtual display** in Settings → Sharing on that Windows computer.
 PC → MacBook"), what went wrong, and the message Dirently showed. On Android
 you can attach **Settings → General → Diagnostics → Export diagnostics** (it leaves out
 passwords, keys, IDs and IP addresses).
-[Discord](https://discord.gg/6UeurVTxzt) · support@dirently.com ·
+[Discord](https://discord.gg/6UeurVTxzt) · support [at] dirently.com ·
 [GitHub Issues](../../issues)
 
 ## Uninstall

@@ -82,7 +82,7 @@ Only connect to your own or your team's computers. Never install Dirently, join 
 
 - **Bugs and ideas:** open an **[issue](../../issues)**.
 - **Questions and chat:** join the **[Discord](https://discord.gg/6UeurVTxzt)**.
-- **Email:** support@dirently.com
+- **Email:** support [at] dirently.com
 
 Just tell us which devices you used and what went wrong.
 

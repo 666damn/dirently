@@ -48,7 +48,7 @@ Android 版的“导出诊断”会打包手机型号、网络类型、设置和
 
 - **下载：** 安装包放在 GitHub 上，下载时适用 GitHub 的隐私政策。
 - **社区：** 社区在 Discord 上，适用 Discord 的隐私政策。
-- **邮件：** 发到 support@dirently.com 的邮件经 Cloudflare 转发到我们的邮箱。
+- **邮件：** 发到 support [at] dirently.com 的邮件经 Cloudflare 转发到我们的邮箱。
 - **反馈：** 你发给我们的反馈，只用于改进 Dirently 和回复你。
 
 ## 7. 共享
@@ -85,4 +85,4 @@ Dirently 不面向 16 岁以下的儿童。
 
 ## 13. 联系我们
 
-support@dirently.com
+support [at] dirently.com

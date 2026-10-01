@@ -169,7 +169,7 @@ AndroidX and Jetpack Compose libraries in the app:
   version of Dirently, we will give anyone who asks a copy of the complete
   corresponding source code of these libraries, together with our change to
   FFmpeg and the scripts we build them with, for no more than our cost of
-  providing it. Email support@dirently.com.
+  providing it. Email support [at] dirently.com.
 - You may replace these DLLs with your own build of the same FFmpeg version.
   Nothing in Dirently's terms limits your rights under the LGPL for these
   libraries, including changing them and reverse engineering Dirently to debug
@@ -1571,4 +1571,4 @@ DEALINGS IN THE SOFTWARE.
 
 ## Questions
 
-Write to support@dirently.com.
+Write to support [at] dirently.com.

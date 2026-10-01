@@ -82,7 +82,7 @@
 
 - **问题和建议：**在 **[Issues](../../issues)** 里提。
 - **交流和答疑：**加入 **[Discord](https://discord.gg/6UeurVTxzt)**。
-- **邮箱：**support@dirently.com
+- **邮箱：**support [at] dirently.com
 
 告诉我们用的是什么设备、遇到了什么问题就行。
 

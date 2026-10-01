@@ -169,7 +169,7 @@ Dirently 没有中转。我们的服务器只帮设备互相找到对方；画�
 **反馈问题：** 告诉我们用了哪些设备（例如"Windows 11 电脑 → MacBook"）、出了什么
 问题，以及 Dirently 显示的原话。在 Android 上可以附上 **设置 → 常规 → 诊断 → 导出诊断日志**
 生成的文件（不含密码、密钥、ID 和 IP 地址）。
-[Discord](https://discord.gg/6UeurVTxzt) · support@dirently.com ·
+[Discord](https://discord.gg/6UeurVTxzt) · support [at] dirently.com ·
 [GitHub Issues](../../issues)
 
 ## 卸载

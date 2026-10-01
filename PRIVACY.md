@@ -46,7 +46,7 @@ To make direct connections easier, the app may ask your router, via UPnP, NAT-PM
 
 - **Downloads** are hosted on GitHub, whose privacy policy applies when you download.
 - **Our community** is on Discord, whose privacy policy applies there.
-- **Email** to support@dirently.com is forwarded through Cloudflare to our mailbox.
+- **Email** to support [at] dirently.com is forwarded through Cloudflare to our mailbox.
 - **Feedback** you send us is used only to improve Dirently and to reply to you.
 
 ## 7. Sharing
@@ -83,6 +83,6 @@ We may update this policy and will publish the new version here. We will give no
 
 ## 13. Contact
 
-support@dirently.com
+support [at] dirently.com
 
 If this English version and the Chinese translation differ, the English version prevails.

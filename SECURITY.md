@@ -2,7 +2,7 @@
 
 If you think you've found a security problem in Dirently, please **don't open a public issue**.
 
-Email **support@dirently.com** with "Security" in the subject. Tell us:
+Email **support [at] dirently.com** with "Security" in the subject. Tell us:
 
 - what you found and how to reproduce it;
 - which Dirently version and platforms you used.
@@ -17,7 +17,7 @@ Only test against your own devices and groups. Don't try to access other people'
 
 如果你发现了 Dirently 的安全问题，**请不要公开提 Issue**。
 
-请发邮件到 **support@dirently.com**，标题里写上"Security"，并说明：
+请发邮件到 **support [at] dirently.com**，标题里写上"Security"，并说明：
 
 - 发现了什么问题，怎么复现；
 - 用的是哪个版本、哪些平台。

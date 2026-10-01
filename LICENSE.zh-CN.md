@@ -2,7 +2,7 @@
 
 生效日期：2026 年 9 月 29 日
 
-本协议由你与 Dirently 的开发者（位于澳大利亚西澳州，联系方式 support@dirently.com，下称“我们”）订立，适用于你从本仓库下载的 Dirently 应用，以及这些应用使用的 Dirently 协调服务。安装或使用 Dirently，即表示你同意本协议；不同意的，请不要安装或使用。
+本协议由你与 Dirently 的开发者（位于澳大利亚西澳州，联系方式 support [at] dirently.com，下称“我们”）订立，适用于你从本仓库下载的 Dirently 应用，以及这些应用使用的 Dirently 协调服务。安装或使用 Dirently，即表示你同意本协议；不同意的，请不要安装或使用。
 
 本中文版为译文，与英文版不一致时，以英文版为准。
 
@@ -58,4 +58,4 @@
 
 本协议适用澳大利亚西澳州法律，由西澳州法院管辖。
 
-联系方式：support@dirently.com
+联系方式：support [at] dirently.com
