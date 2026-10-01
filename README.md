@@ -8,6 +8,8 @@
     <img alt="public beta" src="https://img.shields.io/badge/public%20beta-free-ff1958">
   </p>
   <p>
+    <a href="https://dirently.com"><strong>Website: dirently.com</strong></a>
+    ·
     <a href="README.zh-CN.md">简体中文</a>
     ·
     <a href="README.md">English</a>

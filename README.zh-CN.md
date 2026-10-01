@@ -8,6 +8,8 @@
     <img alt="公测" src="https://img.shields.io/badge/%E5%85%AC%E6%B5%8B-%E5%85%8D%E8%B4%B9-ff1958">
   </p>
   <p>
+    <a href="https://dirently.com"><strong>官网：dirently.com</strong></a>
+    ·
     <a href="README.zh-CN.md">简体中文</a>
     ·
     <a href="README.md">English</a>
