@@ -24,12 +24,12 @@
 
 | 平台 | 下载 | 说明 |
 |---|---|---|
-| Windows 10 / 11（x64） | [Dirently-Setup-0.2.62.exe](../../releases/download/v0.2.62/Dirently-Setup-0.2.62.exe) · [国内下载](https://download.dirently.com/v0.2.62/Dirently-Setup-0.2.62.exe) | 可以共享这台电脑，也可以控制其他设备。 |
-| macOS 13 及以上（Apple 芯片） | [Dirently-0.2.62-arm64.pkg](../../releases/download/v0.2.62/Dirently-0.2.62-arm64.pkg) · [国内下载](https://download.dirently.com/v0.2.62/Dirently-0.2.62-arm64.pkg) | 可以共享这台 Mac，也可以控制其他设备。已经过 Apple 签名和公证。 |
-| Android 12 及以上 | [Dirently-0.2.62.apk](../../releases/download/v0.2.62/Dirently-0.2.62.apk) · [国内下载](https://download.dirently.com/v0.2.62/Dirently-0.2.62.apk) | 用来控制电脑，不能共享手机。 |
+| Windows 10 / 11（x64） | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | 可以共享这台电脑，也可以控制其他设备。 |
+| macOS 13 及以上（Apple 芯片） | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | 可以共享这台 Mac，也可以控制其他设备。已经过 Apple 签名和公证。 |
+| Android 12 及以上 | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | 用来控制电脑，不能共享手机。 |
 | iPhone / iPad（iOS / iPadOS 17 及以上） | 即将上架 App Store | 用来控制电脑。 |
 
-每个版本都附有 [`SHA256SUMS`](../../releases/download/v0.2.62/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.62/SHA256SUMS)），可以用来核对下载的文件：
+每个版本都附有 [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.63/SHA256SUMS)），可以用来核对下载的文件：
 
 - **Windows（PowerShell）：**`Get-FileHash .\Dirently-Setup-<版本>.exe`
 - **macOS：**`shasum -a 256 Dirently-<版本>-arm64.pkg`
@@ -66,7 +66,7 @@
 - **控制端：**Windows、Mac 和 Android，iPhone 和 iPad 稍后推出。
 - **远程麦克风：**被控的电脑需要另外安装免费的 VB-CABLE 虚拟声卡。
 - **手柄：**只有 Windows 被控端支持。
-- **延迟很高的线路：**跨洲这类长距离连接下，画面偶尔会短暂卡住，传大文件可能会停住不动，我们正在改进。
+- **延迟很高的线路：**跨洲这类长距离连接下，画面仍可能偶尔短暂卡住，我们正在改进。
 - **测试版：**难免有 bug，更新也会比较频繁。
 
 ## 隐私
