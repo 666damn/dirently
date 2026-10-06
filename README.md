@@ -24,12 +24,12 @@ Pick your device below, or see all versions on **[Releases](../../releases/lates
 
 | Platform | Download | Notes |
 |---|---|---|
-| Windows 10 / 11 (x64) | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [mirror](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | Can share this PC and control other devices. |
-| macOS 13 or later (Apple Silicon) | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | Can share this Mac and control other devices. Signed and notarized by Apple. |
-| Android 12 or later | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | Controls your computers; it does not share the phone. |
+| Windows 10 / 11 (x64) | [Dirently-Setup-0.2.62.exe](../../releases/download/v0.2.62/Dirently-Setup-0.2.62.exe) · [mirror](https://download.dirently.com/v0.2.62/Dirently-Setup-0.2.62.exe) | Can share this PC and control other devices. |
+| macOS 13 or later (Apple Silicon) | [Dirently-0.2.62-arm64.pkg](../../releases/download/v0.2.62/Dirently-0.2.62-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.62/Dirently-0.2.62-arm64.pkg) | Can share this Mac and control other devices. Signed and notarized by Apple. |
+| Android 12 or later | [Dirently-0.2.62.apk](../../releases/download/v0.2.62/Dirently-0.2.62.apk) · [mirror](https://download.dirently.com/v0.2.62/Dirently-0.2.62.apk) | Controls your computers; it does not share the phone. |
 | iPhone / iPad (iOS / iPadOS 17 or later) | Coming soon to the App Store | Controls your computers. |
 
-Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.63/SHA256SUMS)). To check a download:
+Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.62/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.62/SHA256SUMS)). To check a download:
 
 - **Windows (PowerShell):** `Get-FileHash .\Dirently-Setup-<version>.exe`
 - **macOS:** `shasum -a 256 Dirently-<version>-arm64.pkg`
@@ -66,7 +66,7 @@ The **[user guide](GUIDE.md)** covers installing on each platform, Mac permissio
 - **Controllers:** Windows, Mac and Android. iPhone and iPad are coming later.
 - **Remote microphone:** the controlled computer needs the free VB-CABLE virtual audio driver installed.
 - **Gamepads:** Windows hosts only.
-- **Very high latency:** over long-distance links (for example across continents), the picture can still freeze for a moment. We are working on it.
+- **Very high latency:** over long-distance links (for example across continents), the picture can freeze for a moment and large file transfers can stall. We are working on it.
 - **Beta software:** expect bugs and frequent updates.
 
 ## Privacy

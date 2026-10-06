@@ -21,10 +21,6 @@ licenses, the table says which one Dirently uses.
 - **VB-CABLE** is not part of Dirently. It is optional. You download and
   install it yourself from VB-Audio (https://vb-audio.com/Cable/), under
   VB-Audio's own license.
-- **ZeroTier** is an independent, optional product. Dirently does not contain,
-  distribute or license ZeroTier. You obtain it from https://www.zerotier.com/
-  and use it under ZeroTier's own terms. Dirently only reads local status and
-  offers setup guidance; it does not require a ZeroTier account or cloud token.
 - Parts of Windows, macOS and Android, and your graphics drivers, come with
   your system, not with Dirently. That includes the video encoders of AMD
   (AMF), NVIDIA (NVENC) and Intel (Quick Sync Video) graphics drivers, and
@@ -1572,34 +1568,6 @@ DEALINGS IN THE SOFTWARE.
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 ```
-
-
-## Common-password policy data (SecLists)
-
-Pinned Pwdb top 10,000 entries from SecLists, commit 12274c98fdebe98c7a7284914436a472ed469aed.
-Source: https://github.com/danielmiessler/SecLists
-
-MIT License
-
-Copyright (c) 2018 Daniel Miessler
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 ## Questions
 
