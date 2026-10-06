@@ -22,9 +22,12 @@ connect directly to each other. No account needed.
    you connect from. Get it from [Releases](../../releases/latest).
 2. **Create a group** on one of them: on the **Devices** page, click
    **Create group**. Enter a **Group name** and a **Group password** (at least
-   8 characters), keep **Private group**, and click **Create and Join**.
+   10 characters and not a common one; **Generate strong password** makes one), keep
+   **Private group**, and click **Create and join**.
 3. **Join the group** on the other device: click **Find group**, search for the
-   name, click **Join**, type the password and click **Join group**.
+   name, click **Join**, type the password and click **Join group**. With a
+   one-time invitation from the group's administrator, click **Use an
+   invitation** in **Find group** instead and paste the code or link.
 4. **Check that the computer is shared.** Sharing is on by default: the
    computer's own card then shows **Stop sharing**. If it shows
    **Share this device**, click it.
@@ -34,6 +37,12 @@ Good to know:
 
 - Anyone can find a group by name with **Find group**. Use a strong password
   and share it only with people you trust.
+- To add a device without giving out the password, open **Manage group** →
+  **Invitations and protection** → **Invite a new device**. Each invitation
+  (code, link or QR code) admits one device once. There you can also turn on
+  **Require administrator approval**: a correct password then only sends an
+  application, which an administrator approves. If someone keeps guessing the
+  password, administrators see a warning there.
 - After 10 wrong passwords, a device is blocked from that group until the
   group's administrator unbans it (**Manage group** → **Bans** → **Unban**).
 - Keep all your devices on the same Dirently version.
@@ -124,6 +133,8 @@ In the session window:
 | Fullscreen on/off | F11 | **Fullscreen** in the session menu |
 | Release mouse and keyboard | Ctrl+Alt+Z | ⌃⌥Z (Control+Option+Z) |
 
+- To change these shortcuts or the emergency-disconnect key below, open
+  **Settings → Shortcuts**.
 - The session menu is the movable Dirently icon in the session window.
 - Release is for when **Immersive mode** (Settings → Remote picture) or a game
   holds the mouse and keyboard. Click in the window to capture them again.
