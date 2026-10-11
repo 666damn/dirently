@@ -1,8 +1,11 @@
 # Security
 
-If you think you've found a security problem in Dirently, please **don't open a public issue**.
+If you think you've found a security problem in Dirently, please **don't open a public issue**. Report it privately in either of these ways:
 
-Email **support [at] dirently.com** with "Security" in the subject. Tell us:
+- use GitHub's private reporting: the **Security** tab of this repository → **Report a vulnerability**;
+- or email **support [at] dirently.com** with "Security" in the subject.
+
+Tell us:
 
 - what you found and how to reproduce it;
 - which Dirently version and platforms you used.
@@ -11,13 +14,18 @@ We'll reply as soon as we can and keep you posted while we fix it. Please give u
 
 Only test against your own devices and groups. Don't try to access other people's devices, groups or data.
 
+Ordinary bugs and feature requests are welcome as public issues.
+
 ---
 
 # 安全问题
 
-如果你发现了 Dirently 的安全问题，**请不要公开提 Issue**。
+如果你发现了 Dirently 的安全问题，**请不要公开提 Issue**，用下面任一种方式私下报告：
 
-请发邮件到 **support [at] dirently.com**，标题里写上"Security"，并说明：
+- 用 GitHub 的私密报告：本仓库的 **Security** 页 → **Report a vulnerability**；
+- 或发邮件到 **support [at] dirently.com**，标题里写上"Security"。
+
+请说明：
 
 - 发现了什么问题，怎么复现；
 - 用的是哪个版本、哪些平台。
@@ -25,3 +33,5 @@ Only test against your own devices and groups. Don't try to access other people'
 我们会尽快回复，修复过程中也会随时告诉你进展。请在我们发布修复之后，再公开细节。
 
 测试时只用你自己的设备和小组，不要尝试访问别人的设备、小组或数据。
+
+普通 bug 和功能建议欢迎直接公开提 Issue。
