@@ -1,6 +1,6 @@
 # Dirently Privacy Policy
 
-Effective date: 30 September 2026
+Effective date: 11 October 2026
 
 This policy explains what information the developer of Dirently, based in Western Australia, Australia ("we", "us"), handles when you use the Dirently apps, the Dirently coordination service and dirently.com.
 
@@ -22,6 +22,7 @@ The coordination service helps your devices find each other and set up a connect
 | Group data: group name, members' device IDs and names, roles, online/offline times, wrong-password counts, bans | Groups, permissions and protection against password guessing | Stored on the server. A group is deleted after all its members have been offline for 3 days; a member's details are removed when they leave |
 | Group password | Check group joins | Stored as a one-way hash plus an encrypted copy. The group admin and we can view the current password, so don't reuse a password from elsewhere |
 | Security and activity logs: time, event, source IP, a pseudonymous device reference | Investigate abuse and faults | 30 days, then deleted automatically (checked every hour) |
+| Connection results: whether each connection succeeded or failed, the category of any failure (for example a timeout, or the other device not sharing), the kind of path used (local network, direct, hole punching, UPnP, IPv6, ZeroTier), a time bracket for how long it took, and both devices' platforms | Find out which networks and device combinations fail to connect, so we can improve direct connections | Kept only as hourly totals, with no IP address, device ID or device name, and deleted after 30 days. The record used to check a report is held in memory only, for at most 30 minutes |
 
 **Device names:** on computers, the device name defaults to your computer's name. If it contains your real name, your group and we will see it. You can change it in Settings.
 
@@ -34,7 +35,7 @@ The coordination service helps your devices find each other and set up a connect
 
 ## 4. What stays on your device
 
-Your device keys, settings, trusted coordination-service certificates and diagnostic logs stay on your device; we never receive them. On computers the app also keeps a hash derived from the hardware ID, used only to detect a device identity copied to another machine.
+Your device keys, settings, trusted coordination-service certificates and diagnostic logs stay on your device; we never receive them. We receive only the connection results described in section 2, never the logs themselves. On computers the app also keeps a hash derived from the hardware ID, used only to detect a device identity copied to another machine.
 
 The Android app's "Export diagnostics" bundles your phone model, network type, settings and logs. We only receive it if you send it to us yourself.
 
@@ -44,7 +45,7 @@ To make direct connections easier, the app may ask your router, via UPnP, NAT-PM
 
 ## 6. Other services we use
 
-- **Downloads** are hosted on GitHub, whose privacy policy applies when you download.
+- **Downloads** are hosted on download.dirently.com (Cloudflare R2) and GitHub. When you download, Cloudflare or GitHub processes your IP address under its own privacy policy.
 - **Our community** is on Discord, whose privacy policy applies there.
 - **Email** to support [at] dirently.com is forwarded through Cloudflare to our mailbox.
 - **Feedback** you send us is used only to improve Dirently and to reply to you.
@@ -73,15 +74,11 @@ No system is perfectly secure.
 
 You can change your device name, stop sharing, leave a group or uninstall at any time. To ask about, correct or delete information about your device (such as group membership or ban records), email us with the device name and roughly when you used it. Because there are no accounts, we may ask you to confirm from that device.
 
-## 11. Children
-
-Dirently is not intended for children under 16.
-
-## 12. Changes
+## 11. Changes
 
 We may update this policy and will publish the new version here. We will give notice of significant changes.
 
-## 13. Contact
+## 12. Contact
 
 support [at] dirently.com
 
