@@ -27,7 +27,7 @@
 | Windows 10 / 11（x64） | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | 可以共享这台电脑，也可以控制其他设备。 |
 | macOS 13 及以上（Apple 芯片） | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | 可以共享这台 Mac，也可以控制其他设备。已经过 Apple 签名和公证。 |
 | Android 12 及以上 | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | 用来控制电脑，不能共享手机。 |
-| iPhone / iPad（iOS / iPadOS 17 及以上） | 即将上架 App Store | 用来控制电脑。 |
+| iPhone / iPad（iOS / iPadOS 17 及以上） | [TestFlight 公测](https://testflight.apple.com/join/cQFb6pPh)（先装苹果的 TestFlight App）；App Store 版正在审核 | 用来控制电脑。 |
 
 每个版本都附有 [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.63/SHA256SUMS)），可以用来核对下载的文件：
 
@@ -63,7 +63,7 @@
 
 - **没有中转服务器。** 两边都在限制很严的网络里（部分手机网络或公司网络）时，可能连不上。遇到了请告诉我们，找出这些情况正是这次测试的目的。
 - **被控端：**只支持 Windows 10/11 和 Apple 芯片的 Mac，不支持 Intel Mac 和 Linux。
-- **控制端：**Windows、Mac 和 Android，iPhone 和 iPad 稍后推出。
+- **控制端：**Windows、Mac、Android，以及 iPhone 和 iPad（TestFlight 公测）。
 - **远程麦克风：**被控的电脑需要另外安装免费的 VB-CABLE 虚拟声卡。
 - **手柄：**只有 Windows 被控端支持。
 - **延迟很高的线路：**跨洲这类长距离连接下，画面仍可能偶尔短暂卡住，我们正在改进。

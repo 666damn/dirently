@@ -27,7 +27,7 @@ Pick your device below, or see all versions on **[Releases](../../releases/lates
 | Windows 10 / 11 (x64) | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [mirror](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | Can share this PC and control other devices. |
 | macOS 13 or later (Apple Silicon) | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | Can share this Mac and control other devices. Signed and notarized by Apple. |
 | Android 12 or later | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | Controls your computers; it does not share the phone. |
-| iPhone / iPad (iOS / iPadOS 17 or later) | Coming soon to the App Store | Controls your computers. |
+| iPhone / iPad (iOS / iPadOS 17 or later) | [Public beta on TestFlight](https://testflight.apple.com/join/cQFb6pPh) (install Apple's TestFlight app first); the App Store version is in review | Controls your computers. |
 
 Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.63/SHA256SUMS)). To check a download:
 
@@ -63,7 +63,7 @@ The **[user guide](GUIDE.md)** covers installing on each platform, Mac permissio
 
 - **No relay server.** If both sides are behind very strict networks (some mobile or corporate ones), they may not be able to connect. Please report these; finding them is what the beta is for.
 - **Hosts:** Windows 10/11 and Apple Silicon Macs only. Intel Macs and Linux are not supported.
-- **Controllers:** Windows, Mac and Android. iPhone and iPad are coming later.
+- **Controllers:** Windows, Mac, Android, and iPhone and iPad (TestFlight public beta).
 - **Remote microphone:** the controlled computer needs the free VB-CABLE virtual audio driver installed.
 - **Gamepads:** Windows hosts only.
 - **Very high latency:** over long-distance links (for example across continents), the picture can still freeze for a moment. We are working on it.
