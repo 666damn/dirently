@@ -4,7 +4,7 @@ Dirently is closed-source software. Its apps also contain open-source software
 written by others. This file lists that software, its license and where its
 source code is. Thank you to everyone who works on these projects.
 
-The same file ships with every Dirently app:
+The same file ships with the Windows, macOS and Android apps:
 
 - Windows (`Dirently-Setup-<version>.exe`, 64-bit): in the `resources\licenses`
   folder of the Dirently program folder, with the individual license files

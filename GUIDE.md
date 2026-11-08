@@ -215,8 +215,9 @@ Most home networks can. When they can't, Dirently explains why, starting with
    router for its own port mapping. The **NAT** box there shows the result,
    for example **Port mapping: UDP …**.
 3. **Mapping table full.** If you see **Port mapping: the router refused; its
-   mapping table may be full (restarting the router clears it)**, restart the
-   router and try again. If it comes back, use ZeroTier (next step).
+   mapping table may be full. Review mappings you no longer need.**, click
+   **Review router mappings** (Settings → Network) and delete the mappings you
+   no longer need. If the message comes back, use ZeroTier (next step).
 4. **Use ZeroTier (easiest).** Install the free [ZeroTier](https://www.zerotier.com/)
    on both devices and join them to the same ZeroTier network. Dirently finds
    the ZeroTier addresses by itself and connects over them, with no router
