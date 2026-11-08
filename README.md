@@ -4,7 +4,7 @@
   <p><strong>Low-latency remote desktop that connects your devices directly.</strong><br>No account. The picture never takes a detour through our servers.</p>
   <p>
     <a href="../../releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/666damn/dirently?label=release&color=25abff"></a>
-    <img alt="platforms" src="https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Android-2ed9ff">
+    <img alt="platforms" src="https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Android%20%7C%20iOS-2ed9ff">
     <img alt="public beta" src="https://img.shields.io/badge/public%20beta-free-ff1958">
   </p>
   <p>
@@ -25,9 +25,9 @@ Pick your device below, or see all versions on **[Releases](../../releases/lates
 | Platform | Download | Notes |
 |---|---|---|
 | Windows 10 / 11 (x64) | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [mirror](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | Can share this PC and control other devices. |
-| macOS 13 or later (Apple Silicon) | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | Can share this Mac and control other devices. Signed and notarized by Apple. |
+| macOS 13 or later (Apple Silicon) | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | Can share this Mac and control other devices. Signed with our Developer ID and notarized by Apple. |
 | Android 12 or later | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | Controls your computers; it does not share the phone. |
-| iPhone / iPad (iOS / iPadOS 17 or later) | [Public beta on TestFlight](https://testflight.apple.com/join/cQFb6pPh) (install Apple's TestFlight app first); the App Store version is in review | Controls your computers. |
+| iPhone / iPad (iOS / iPadOS 17 or later) | [App Store](https://apps.apple.com/app/id6817623617) · mainland China: [public beta on TestFlight](https://testflight.apple.com/join/cQFb6pPh) (install Apple's TestFlight app first; the App Store version is not yet available in mainland China) | Controls your computers; it does not share the iPhone or iPad. One app for both. |
 
 Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.63/SHA256SUMS)). To check a download:
 
@@ -49,13 +49,13 @@ Compare the result with the matching line in `SHA256SUMS`.
 
 Computers share themselves by default, so you can connect to them right away (you can turn this off on the computer's own card). Everyone in a group can see its devices, so only give the password to people you trust.
 
-The **[user guide](GUIDE.md)** covers installing on each platform, Mac permissions, the in-session menu, the phone shortcut bar, connection problems and uninstalling.
+The **[user guide](GUIDE.md)** covers installing on each platform (including iPhone and iPad), Mac permissions, the in-session menu, the phone shortcut bar, connection problems and uninstalling.
 
 ## How it connects
 
 - A small Dirently service only helps your devices **find each other**.
 - The picture, sound, input and files then go **directly between your devices**, encrypted.
-- Nothing is relayed through our servers. Most home and office networks work, and automatic port mapping (UPnP) on your router helps.
+- Nothing is relayed through our servers. Most home and office networks work. Where the router allows automatic port mapping (UPnP), Dirently sets up its own mapping.
 - When both sides sit behind very strict networks, a direct connection may not be possible. Dirently then tells you why instead of silently falling back to a relay.
 - **Can't connect?** Install the free [ZeroTier](https://www.zerotier.com/) on both devices and join them to the same ZeroTier network. Dirently finds the ZeroTier addresses by itself and connects over them, with no router setup. After turning ZeroTier on, give it a few seconds before connecting. If your phone just switched between Wi-Fi and mobile data, turn ZeroTier off and on again. (On Android, only one VPN app can run at a time, so ZeroTier can't run alongside another VPN.)
 
@@ -63,7 +63,7 @@ The **[user guide](GUIDE.md)** covers installing on each platform, Mac permissio
 
 - **No relay server.** If both sides are behind very strict networks (some mobile or corporate ones), they may not be able to connect. Please report these; finding them is what the beta is for.
 - **Hosts:** Windows 10/11 and Apple Silicon Macs only. Intel Macs and Linux are not supported.
-- **Controllers:** Windows, Mac, Android, and iPhone and iPad (TestFlight public beta).
+- **Controllers:** Windows, Mac, Android, iPhone and iPad (iPhone and iPad from the App Store; in mainland China, through the TestFlight public beta).
 - **Remote microphone:** the controlled computer needs the free VB-CABLE virtual audio driver installed.
 - **Gamepads:** Windows hosts only.
 - **Very high latency:** over long-distance links (for example across continents), the picture can still freeze for a moment. We are working on it.

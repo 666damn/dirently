@@ -4,13 +4,14 @@
 
 # Dirently user guide
 
-Control your own computers from another computer or a phone. Your devices
-connect directly to each other. No account needed.
+Control your own computers from another computer, a phone or a tablet. Your
+devices connect directly to each other. No account needed.
 
 [Getting started](#getting-started) ·
 [macOS](#macos-first-launch) ·
 [Windows](#windows-first-launch) ·
 [Android](#android) ·
+[iPhone and iPad](#iphone-and-ipad) ·
 [Remote microphone](#remote-microphone) ·
 [Shortcuts](#keyboard-shortcuts) ·
 [Can't connect?](#cant-connect) ·
@@ -19,7 +20,10 @@ connect directly to each other. No account needed.
 ## Getting started
 
 1. **Install Dirently** on the computer you want to control and on the device
-   you connect from. Get it from [Releases](../../releases/latest).
+   you connect from. Download the Windows, Mac and Android versions from
+   [dirently.com](https://dirently.com/#download) (they are also on
+   [Releases](../../releases/latest)). For iPhone and iPad, see
+   [iPhone and iPad](#iphone-and-ipad).
 2. **Create a group** on one of them: on the **Devices** page, click
    **Create group**. Enter a **Group name** and a **Group password** (at least
    10 characters and not a common one; **Generate strong password** makes one), keep
@@ -52,7 +56,8 @@ Good to know:
 You need an Apple Silicon Mac with macOS 13 or later.
 
 1. Open `Dirently-<version>-arm64.pkg` and follow the installer. The package is
-   signed and notarized by Apple, so macOS opens it without a warning.
+   signed with our Developer ID and notarized by Apple, so macOS opens it
+   without a warning.
 2. Dirently then starts in the background. Click its menu bar icon and choose
    **Show Dirently**, or open it from Applications.
 3. Turn on these permissions in **System Settings → Privacy & Security**. A Mac
@@ -91,15 +96,48 @@ You need Windows 10 or 11, 64-bit.
 The Android app controls your computers. The phone itself can't be controlled.
 You need Android 12 or later.
 
-1. Download the `.apk` from [Releases](../../releases/latest) on the phone and
-   open it. Allow your browser or file manager to install apps
-   (**Allow from this source**), then tap **Install**. If Play Protect warns
+1. On the phone, download the `.apk` from
+   [dirently.com](https://dirently.com/#download) (it is also on
+   [Releases](../../releases/latest)) and open it. Allow your browser or file
+   manager to install apps (**Allow from this source**), then tap **Install**. If Play Protect warns
    about an unknown app, you can still install it.
 2. Create or join a group as in [Getting started](#getting-started). Computers
    that are online and shared appear in the list. Tap **Connect**.
 3. In a session, tap the small tab at the top for the session menu:
    **Keyboard**, **Input** (touch, trackpad or virtual mouse),
    **Microphone passthrough**, **Files** and **Disconnect**.
+
+## iPhone and iPad
+
+The iPhone and iPad app controls your computers. The iPhone or iPad itself
+can't be controlled. You need iOS or iPadOS 17 or later; the same app works on
+both.
+
+1. Install Dirently from the
+   [App Store](https://apps.apple.com/app/id6817623617). The App Store version
+   is not yet available in mainland China: there, install Apple's TestFlight
+   app first, then join the
+   [public beta on TestFlight](https://testflight.apple.com/join/cQFb6pPh).
+2. Open Dirently. When iOS asks to find devices on your local network, allow
+   it.
+3. Create or join a group as in [Getting started](#getting-started). Computers
+   that are online and shared appear in the list. Tap **Connect**.
+4. In a session, tap the small tab at the top for the session menu:
+   **Input** (direct touch, trackpad or virtual mouse), **Keyboard** with the
+   [phone shortcut bar](#keyboard-shortcuts), **Gamepad** (on-screen, Windows
+   computers only), **Files**, **Microphone passthrough** and **Disconnect**.
+   You can also change the resolution, refresh rate, codec and bandwidth there.
+
+Good to know:
+
+- The clipboard is shared with the computer.
+- In **Files** you can upload photos, videos and documents to the computer.
+  Files you download from it are saved in the Files app, under
+  **On My iPhone** (or **On My iPad**) → **Dirently**.
+- Hardware keyboards, mice and trackpads work too. Game controllers work with
+  Windows computers.
+- After you switch to another app, iOS keeps the session for only about 30
+  seconds.
 
 ## Remote microphone
 
@@ -172,12 +210,13 @@ Most home networks can. When they can't, Dirently explains why, starting with
 1. **Basics.** Both devices are online, in the same group and on the same
    version. The computer shows **Stop sharing**, and **Block all remote
    control** is off (Settings → Sharing).
-2. **Turn on UPnP on the router.** In Dirently, keep **Enable UPnP automatic
-   port mapping** on (Settings → Network, on by default). The **NAT** box there
-   shows the result, for example **Port mapping: UDP …**.
+2. **Automatic port mapping.** In Dirently, keep **Enable UPnP automatic port
+   mapping** on (Settings → Network, on by default). Dirently then asks the
+   router for its own port mapping. The **NAT** box there shows the result,
+   for example **Port mapping: UDP …**.
 3. **Mapping table full.** If you see **Port mapping: the router refused; its
    mapping table may be full (restarting the router clears it)**, restart the
-   router and try again. If it comes back, use a port forward.
+   router and try again. If it comes back, use ZeroTier (next step).
 4. **Use ZeroTier (easiest).** Install the free [ZeroTier](https://www.zerotier.com/)
    on both devices and join them to the same ZeroTier network. Dirently finds
    the ZeroTier addresses by itself and connects over them, with no router
@@ -189,16 +228,12 @@ Most home networks can. When they can't, Dirently explains why, starting with
    servers, which adds delay (`zerotier-cli peers` shows DIRECT or RELAY). On
    Android only one VPN app can run at a time, so ZeroTier can't run alongside
    another VPN.
-5. **Port forward (last resort).** On the computer you want to control, set
-   **Sharing start port** (Settings → Network) to a fixed number from 1025 to
-   65534 (0 means random) and save. On its router, forward that **UDP** port to
-   the computer, and give the computer a fixed local IP. If the strict network
-   is on the side you connect from, do the same there with **Client port**.
-6. **Strict networks.** If Dirently says you are behind your provider's NAT
-   (CGNAT), open the port on the other side instead. If both sides are on
-   strict networks (mobile data, office, school, hotel, some VPNs), a direct
-   connection may be impossible; move one side to a home network.
-7. **Firewall.** Allow Dirently in any third-party firewall or security app.
+5. **Strict networks.** If Dirently says one side is behind its provider's NAT
+   (CGNAT), the connection relies on the other side: keep automatic port
+   mapping on there (step 2). If both sides are on strict networks (mobile
+   data, office, school, hotel, some VPNs), a direct connection may be
+   impossible; use ZeroTier, or move one side to a home network.
+6. **Firewall.** Allow Dirently in any third-party firewall or security app.
 
 **No picture?** If you see **The remote device sent no video**, set **Display**
 to **Virtual display** in Settings → Sharing on that Windows computer.
@@ -226,3 +261,9 @@ Settings → Privacy & Security. Its identity and settings stay in
 
 **Android:** touch and hold the Dirently icon and choose **Uninstall**. This
 deletes the phone's identity; after reinstalling, join your group again.
+
+**iPhone and iPad:** touch and hold the Dirently icon and choose
+**Remove App** → **Delete App**. The device's key can stay in the iOS
+keychain after the app is deleted, so a reinstall on the same iPhone or iPad
+may still be in its groups. To take the device out of a group, use
+**Leave group** before deleting the app.
