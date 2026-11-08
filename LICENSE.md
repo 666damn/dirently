@@ -2,7 +2,7 @@
 
 Effective date: 29 September 2026
 
-This agreement is between you and the developer of Dirently, based in Western Australia, Australia ("we", "us"; contact support [at] dirently.com). It covers the Dirently apps you download from this repository and the Dirently coordination service they use. By installing or using Dirently, you agree to it. If you don't agree, don't install or use Dirently.
+This agreement is between you and the developer of Dirently, based in Western Australia, Australia ("we", "us"; contact support [at] dirently.com). It covers the Dirently apps you get from dirently.com, the App Store, TestFlight or this repository, and the Dirently coordination service they use. By installing or using Dirently, you agree to it. If you don't agree, don't install or use Dirently.
 
 ## 1. What you may do
 
