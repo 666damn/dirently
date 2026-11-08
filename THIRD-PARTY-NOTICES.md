@@ -12,6 +12,9 @@ The same file ships with every Dirently app:
   `Dirently.app/Contents/Resources/licenses`
 - Android (`.apk`): inside the app, as `assets/THIRD-PARTY-NOTICES.txt`
 
+This file also covers the iPhone and iPad app (App Store and TestFlight). Its
+components are listed under "iPhone and iPad only" below.
+
 Each component stays under its own license. The license texts are in the
 appendix at the end of this file. When a component offers a choice of
 licenses, the table says which one Dirently uses.
@@ -25,8 +28,8 @@ licenses, the table says which one Dirently uses.
   distribute or license ZeroTier. You obtain it from https://www.zerotier.com/
   and use it under ZeroTier's own terms. Dirently only reads local status and
   offers setup guidance; it does not require a ZeroTier account or cloud token.
-- Parts of Windows, macOS and Android, and your graphics drivers, come with
-  your system, not with Dirently. That includes the video encoders of AMD
+- Parts of Windows, macOS, Android, iOS and iPadOS, and your graphics drivers,
+  come with your system, not with Dirently. That includes the video encoders of AMD
   (AMF), NVIDIA (NVENC) and Intel (Quick Sync Video) graphics drivers, and
   Windows' own Media Foundation H.264 encoder, which Dirently for Windows uses
   when a computer has no graphics encoder.
@@ -129,6 +132,16 @@ AndroidX and Jetpack Compose libraries in the app:
 - CustomView PoolingContainer 1.0.0
 - Interpolator 1.0.0
 - VersionedParcelable 1.1.1
+
+## iPhone and iPad only
+
+| Component | Version | License | Copyright | Upstream |
+|---|---|---|---|---|
+| Opus | source commit 03647f524a40 | BSD-3-Clause | Copyright 2001-2023 Xiph.Org, Skype Limited, Octasic, Jean-Marc Valin, Timothy B. Terriberry, CSIRO, Gregory Maxwell, Mark Borgerding, Erik de Castro Lopo, Mozilla, Amazon | https://opus-codec.org |
+
+The iPhone and iPad app also uses the common-password data (SecLists) listed
+at the end of this file, and Apple's own system frameworks, which are part of
+iOS and iPadOS.
 
 ## LGPL components and source code
 
@@ -335,8 +348,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ### Opus License (BSD 3-Clause)
 
-Used by Opus in the macOS and Android apps, and by Opus 1.6.1 inside
-`avcodec-62.dll` on Windows (the same text).
+Used by Opus in the macOS, Android, iPhone and iPad apps, and by Opus 1.6.1
+inside `avcodec-62.dll` on Windows (the same text).
 
 ```text
 Copyright 2001-2023 Xiph.Org, Skype Limited, Octasic,

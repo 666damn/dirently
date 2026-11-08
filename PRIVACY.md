@@ -1,6 +1,6 @@
 # Dirently Privacy Policy
 
-Effective date: 11 October 2026
+Effective date: 8 November 2026
 
 This policy explains what information the developer of Dirently, based in Western Australia, Australia ("we", "us"), handles when you use the Dirently apps, the Dirently coordination service and dirently.com.
 
@@ -45,7 +45,7 @@ To make direct connections easier, the app may ask your router, via UPnP, NAT-PM
 
 ## 6. Other services we use
 
-- **Downloads** are hosted on download.dirently.com (Cloudflare R2) and GitHub. When you download, Cloudflare or GitHub processes your IP address under its own privacy policy.
+- **Downloads** are hosted on download.dirently.com (Cloudflare R2) and GitHub. When you download, Cloudflare or GitHub processes your IP address under its own privacy policy. The iPhone and iPad app is distributed by Apple through the App Store and TestFlight, and Apple processes your information under its own privacy policy.
 - **Our community** is on Discord, whose privacy policy applies there.
 - **Email** to support [at] dirently.com is forwarded through Cloudflare to our mailbox.
 - **Feedback** you send us is used only to improve Dirently and to reply to you.

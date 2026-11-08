@@ -1,6 +1,6 @@
 # Dirently 隐私政策
 
-生效日期：2026 年 10 月 11 日
+生效日期：2026 年 11 月 8 日
 
 本政策说明 Dirently 的开发者（位于澳大利亚西澳州，下称“我们”）在你使用 Dirently 应用、Dirently 协调服务和 dirently.com 时，会处理哪些信息。
 
@@ -47,7 +47,7 @@ Android 版的“导出诊断”会打包手机型号、网络类型、设置和
 
 ## 6. 我们使用的其他服务
 
-- **下载：** 安装包放在 download.dirently.com（Cloudflare R2）和 GitHub 上。下载时，Cloudflare 或 GitHub 会处理你的 IP 地址，分别适用它们的隐私政策。
+- **下载：** 安装包放在 download.dirently.com（Cloudflare R2）和 GitHub 上。下载时，Cloudflare 或 GitHub 会处理你的 IP 地址，分别适用它们的隐私政策。iPhone 和 iPad 版由 Apple 通过 App Store 和 TestFlight 分发，Apple 按它自己的隐私政策处理你的信息。
 - **社区：** 社区在 Discord 上，适用 Discord 的隐私政策。
 - **邮件：** 发到 support [at] dirently.com 的邮件经 Cloudflare 转发到我们的邮箱。
 - **反馈：** 你发给我们的反馈，只用于改进 Dirently 和回复你。
