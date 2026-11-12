@@ -1,6 +1,6 @@
 # Dirently Privacy Policy
 
-Effective date: 8 November 2026
+Effective date: 12 November 2026
 
 This policy explains what information the developer of Dirently, based in Western Australia, Australia ("we", "us"), handles when you use the Dirently apps, the Dirently coordination service and dirently.com.
 
@@ -20,6 +20,7 @@ The coordination service helps your devices find each other and set up a connect
 | Network addresses: source IP, public port, local IPv4 addresses | Set up a direct connection between two devices | In memory while online or in a session; shared only with the device you connect to |
 | Status: displays, stream settings, frame rate, bitrate, latency | Pick suitable settings and show them to both sides of a session | In memory while online |
 | Group data: group name, members' device IDs and names, roles, online/offline times, wrong-password counts, bans | Groups, permissions and protection against password guessing | Stored on the server. A group is deleted after all its members have been offline for 3 days; a member's details are removed when they leave |
+| Device tag: a code the app calculates on your device for each group; it is different in every group | Enforce group bans | Stored on the server while you are in the group, while your application to join it waits for approval and while a ban from it lasts, and for at most 7 days after a failed attempt to join it. Deleted when none of these applies any more or the group is deleted; backup copies are overwritten over time |
 | Group password | Check group joins | Stored as a one-way hash plus an encrypted copy. The group admin and we can view the current password, so don't reuse a password from elsewhere |
 | Security and activity logs: time, event, source IP, a pseudonymous device reference | Investigate abuse and faults | 30 days, then deleted automatically (checked every hour) |
 | Connection results: whether each connection succeeded or failed, the category of any failure (for example a timeout, or the other device not sharing), the kind of path used (local network, direct, hole punching, UPnP, IPv6, ZeroTier), a time bracket for how long it took, and both devices' platforms | Find out which networks and device combinations fail to connect, so we can improve direct connections | Kept only as hourly totals, with no IP address, device ID or device name, and deleted after 30 days. The record used to check a report is held in memory only, for at most 30 minutes |
@@ -35,9 +36,9 @@ The coordination service helps your devices find each other and set up a connect
 
 ## 4. What stays on your device
 
-Your device keys, settings, trusted coordination-service certificates and diagnostic logs stay on your device; we never receive them. We receive only the connection results described in section 2, never the logs themselves. On computers the app also keeps a hash derived from the hardware ID, used only to detect a device identity copied to another machine.
+Your device keys, settings, trusted coordination-service certificates and diagnostic logs stay on your device; we never receive them. We receive only the connection results described in section 2, never the logs themselves. On computers the app also keeps a hash derived from the hardware ID, used only to detect a device identity copied to another machine. The device tag in section 2 is calculated on your device; what it is calculated from never leaves your device.
 
-The Android app's "Export diagnostics" bundles your phone model, network type, settings and logs. We only receive it if you send it to us yourself.
+The Android app's "Export diagnostics" bundles your phone model, network type, settings and logs. We only receive it if you send it to us yourself. The export does not include the device tag or what it is calculated from.
 
 ## 5. Router port mapping
 
@@ -46,6 +47,10 @@ To make direct connections easier, the app may ask your router, via UPnP, NAT-PM
 ## 6. Other services we use
 
 - **Downloads** are hosted on download.dirently.com (Cloudflare R2) and GitHub. When you download, Cloudflare or GitHub processes your IP address under its own privacy policy. The iPhone and iPad app is distributed by Apple through the App Store and TestFlight, and Apple processes your information under its own privacy policy.
+- **Update checks**: the app contacts download.dirently.com to check for updates.
+- **What an update check sends**: the app checks shortly after it starts, about every 6 hours while it runs, and when you choose **Check for updates**. The request contains no device ID, device name, group or account. As with any download, Cloudflare processes your IP address.
+- **Downloading updates**: the Windows and Android apps download a new version only from download.dirently.com, and only when you choose **Update now** or have chosen **Automatic**. Windows has one more case: if the version you run has a security problem that must be fixed, the app downloads the update and installs it by itself once nobody is connected and the computer is idle, whichever update setting you chose. The app checks the file before installing it. The Mac app gets in-app updates in a later update. The iPhone and iPad app never downloads updates itself: they come from Apple through the App Store or TestFlight.
+- **Service settings**: the app also fetches the coordination service's current connection settings from dirently.com or download.dirently.com. This request contains no device ID, device name, group or account either.
 - **Our community** is on Discord, whose privacy policy applies there.
 - **Email** to support [at] dirently.com is forwarded through Cloudflare to our mailbox.
 - **Feedback** you send us is used only to improve Dirently and to reply to you.

@@ -15,6 +15,7 @@ devices connect directly to each other. No account needed.
 [Remote microphone](#remote-microphone) ·
 [Shortcuts](#keyboard-shortcuts) ·
 [Can't connect?](#cant-connect) ·
+[Updates](#updates) ·
 [Uninstall](#uninstall)
 
 ## Getting started
@@ -49,7 +50,11 @@ Good to know:
   password, administrators see a warning there.
 - After 10 wrong passwords, a device is blocked from that group until the
   group's administrator unbans it (**Manage group** → **Bans** → **Unban**).
-- Keep all your devices on the same Dirently version.
+- In **Manage group**, an administrator can set a computer to **Only be
+  controlled**: the group can still connect to it, but it cannot connect to
+  other devices. **Allow controlling others** undoes it.
+- Update your devices when a new version comes out (see [Updates](#updates)).
+  Older versions still connect.
 
 ## macOS first launch
 
@@ -83,7 +88,7 @@ You need Windows 10 or 11, 64-bit.
 
 1. Run `Dirently-Setup-<version>.exe`.
 2. If you see **Windows protected your PC**, click **More info**, then
-   **Run anyway**. The beta installer is not code-signed yet.
+   **Run anyway**. The beta installer is not code-signed.
 3. Click **Yes** to allow changes. Setup adds a background service, firewall
    rules, a virtual display driver (so a PC without a monitor can be shared)
    and, if missing, the ViGEmBus driver for remote gamepads.
@@ -207,9 +212,9 @@ not even as a fallback. So the two networks must be able to reach each other.
 Most home networks can. When they can't, Dirently explains why, starting with
 "The two networks cannot reach each other directly."
 
-1. **Basics.** Both devices are online, in the same group and on the same
-   version. The computer shows **Stop sharing**, and **Block all remote
-   control** is off (Settings → Sharing).
+1. **Basics.** Both devices are online and in the same group. The computer
+   shows **Stop sharing**, and **Block all remote control** is off
+   (Settings → Sharing).
 2. **Automatic port mapping.** In Dirently, keep **Enable UPnP automatic port
    mapping** on (Settings → Network, on by default). Dirently then asks the
    router for its own port mapping. The **NAT** box there shows the result,
@@ -245,6 +250,37 @@ you can attach **Settings → General → Diagnostics → Export diagnostics** (
 passwords, keys, IDs and IP addresses).
 [Discord](https://discord.gg/6UeurVTxzt) · support [at] dirently.com ·
 [GitHub Issues](../../issues)
+
+## Updates
+
+From 0.2.64 on, Dirently for Windows and Android tells you about new
+versions and can install them. In **Settings**, find **Updates** (on Windows
+it is under **General**) and pick one:
+
+| Choice | What happens |
+|---|---|
+| **Notify only** (default) | A banner shows when a new version is out. Close it with **×** to hide it for that version; the notice of a security update stays. |
+| **Automatic** | Windows installs the update in the background when nobody is connected and the computer is idle. Android downloads it when nobody is connected, then asks you to confirm the install. |
+| **Never notify** | No new-version notices, except for security updates. |
+
+On Windows, if the version you run has a security problem that must be
+fixed, Dirently installs the update by itself when nobody is connected and
+the computer is idle, whichever choice you made.
+
+In every mode, **Check for updates** looks for a new version right away, and
+**Update now** installs it:
+
+- **Windows:** no permission prompt. If someone is connected, Dirently asks
+  first, because the update ends the session. Dirently is back a few minutes
+  later.
+- **Android:** confirm the install when Android asks.
+
+The Mac and iPhone/iPad apps get their own update settings in a later
+update. Until then, download the Mac version from [dirently.com](https://dirently.com/#download),
+and update the iPhone and iPad app through the App Store (or TestFlight).
+
+On Windows and Android, updates come only from download.dirently.com, and
+the latest version is always on [dirently.com](https://dirently.com/#download).
 
 ## Uninstall
 

@@ -24,12 +24,14 @@
 
 | 平台 | 下载 | 说明 |
 |---|---|---|
-| Windows 10 / 11（x64） | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | 可以共享这台电脑，也可以控制其他设备。 |
+| Windows 10 / 11（x64） | [Dirently-Setup-0.2.64.exe](../../releases/download/v0.2.64/Dirently-Setup-0.2.64.exe) · [国内下载](https://download.dirently.com/v0.2.64/Dirently-Setup-0.2.64.exe) | 可以共享这台电脑，也可以控制其他设备。 |
 | macOS 13 及以上（Apple 芯片） | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | 可以共享这台 Mac，也可以控制其他设备。已用我们的 Developer ID 签名，并经过 Apple 公证。 |
-| Android 12 及以上 | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [国内下载](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | 用来控制电脑，不能共享手机。 |
+| Android 12 及以上 | [Dirently-0.2.64.apk](../../releases/download/v0.2.64/Dirently-0.2.64.apk) · [国内下载](https://download.dirently.com/v0.2.64/Dirently-0.2.64.apk) | 用来控制电脑，不能共享手机。 |
 | iPhone / iPad（iOS / iPadOS 17 及以上） | [App Store](https://apps.apple.com/app/id6817623617) · 中国大陆：[TestFlight 公测](https://testflight.apple.com/join/cQFb6pPh)（先装苹果的 TestFlight App；中国大陆 App Store 暂未上架） | 用来控制电脑，不能共享 iPhone 或 iPad。iPhone 和 iPad 用同一个应用。 |
 
-每个版本都附有 [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.63/SHA256SUMS)），可以用来核对下载的文件：
+Mac 版和 iPhone / iPad 版暂时仍是 0.2.63，可以照常和 0.2.64 的设备互连，它们的更新稍后发布。
+
+每个版本都附有 [`SHA256SUMS`](../../releases/download/v0.2.64/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.64/SHA256SUMS)），可以用来核对下载的文件。Mac 安装包仍是 0.2.63，请对照 [0.2.63 的 `SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS)（[国内下载](https://download.dirently.com/v0.2.63/SHA256SUMS)）：
 
 - **Windows（PowerShell）：**`Get-FileHash .\Dirently-Setup-<版本>.exe`
 - **macOS：**`shasum -a 256 Dirently-<版本>-arm64.pkg`
@@ -38,7 +40,7 @@
 
 **Edge 提示"通常不会下载"？** 把鼠标移到这条下载上，点"…"→"保留"，再点"显示更多"→"仍然保留"。
 
-**Windows 提示"Windows 已保护你的电脑"？** 测试版安装包还没有代码签名。点"更多信息"，再点"仍要运行"即可。
+**Windows 提示"Windows 已保护你的电脑"？** 测试版安装包没有代码签名。点"更多信息"，再点"仍要运行"即可。
 
 ## 使用方法
 
@@ -48,6 +50,8 @@
 4. 两边互相能看到了，选中要连接的设备，点**连接**。
 
 电脑默认就开启了共享，装好就能被连接（可以在这台电脑自己的卡片上关闭共享）。同一个小组的人都能看到组里的设备，所以密码只给信得过的人。
+
+**更新：**从 0.2.64 起，Windows 和 Android 版 Dirently 可以在应用里更新。在 **设置 → 更新**（Windows 在 **设置 → 常规**）里：**只提醒**（默认）在有新版本时显示提示条，**自动更新**在没人连接时自动安装（Android 会请你确认），**永不提醒**不显示新版本提示（安全更新除外）。**检查更新**和**立即更新**一直都在。Windows 上，如果你正在用的版本有必须修复的安全问题，无论选的是哪一种，Dirently 都会在没人连接、电脑空闲时自动安装更新。Mac 版和 iPhone / iPad 版之后的更新里也会有自己的更新设置。旧版本仍然可以连接，方便的时候再更新就行。
 
 **[使用指南](GUIDE.zh-CN.md)** 里有各平台（包括 iPhone 和 iPad）的安装方法、Mac 权限、会话菜单、手机快捷键栏、连不上时怎么办和卸载方法。
 
@@ -74,6 +78,7 @@
 - **不用账号：**不需要邮箱，也不用注册。
 - **协调器保存的内容：**只保存让设备互相找到所需的信息，比如设备和小组的身份。
 - **日志：**协调服务的安全日志保存 **30 天**后自动删除。详见[隐私政策](PRIVACY.zh-CN.md)。
+- **检查更新：**应用会向 download.dirently.com 查询最新版本，请求里不含设备 ID、设备名称或小组。
 - **你的数据：**屏幕内容、声音、按键和文件都不经过我们的服务器。
 
 只连接你自己或你团队的电脑。不要因为陌生人的要求去安装 Dirently、加入小组或开启共享。

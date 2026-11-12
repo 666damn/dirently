@@ -24,12 +24,14 @@ Pick your device below, or see all versions on **[Releases](../../releases/lates
 
 | Platform | Download | Notes |
 |---|---|---|
-| Windows 10 / 11 (x64) | [Dirently-Setup-0.2.63.exe](../../releases/download/v0.2.63/Dirently-Setup-0.2.63.exe) · [mirror](https://download.dirently.com/v0.2.63/Dirently-Setup-0.2.63.exe) | Can share this PC and control other devices. |
+| Windows 10 / 11 (x64) | [Dirently-Setup-0.2.64.exe](../../releases/download/v0.2.64/Dirently-Setup-0.2.64.exe) · [mirror](https://download.dirently.com/v0.2.64/Dirently-Setup-0.2.64.exe) | Can share this PC and control other devices. |
 | macOS 13 or later (Apple Silicon) | [Dirently-0.2.63-arm64.pkg](../../releases/download/v0.2.63/Dirently-0.2.63-arm64.pkg) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63-arm64.pkg) | Can share this Mac and control other devices. Signed with our Developer ID and notarized by Apple. |
-| Android 12 or later | [Dirently-0.2.63.apk](../../releases/download/v0.2.63/Dirently-0.2.63.apk) · [mirror](https://download.dirently.com/v0.2.63/Dirently-0.2.63.apk) | Controls your computers; it does not share the phone. |
+| Android 12 or later | [Dirently-0.2.64.apk](../../releases/download/v0.2.64/Dirently-0.2.64.apk) · [mirror](https://download.dirently.com/v0.2.64/Dirently-0.2.64.apk) | Controls your computers; it does not share the phone. |
 | iPhone / iPad (iOS / iPadOS 17 or later) | [App Store](https://apps.apple.com/app/id6817623617) · mainland China: [public beta on TestFlight](https://testflight.apple.com/join/cQFb6pPh) (install Apple's TestFlight app first; the App Store version is not yet available in mainland China) | Controls your computers; it does not share the iPhone or iPad. One app for both. |
 
-Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.63/SHA256SUMS)). To check a download:
+The Mac and iPhone/iPad apps stay on 0.2.63 for now and keep working with 0.2.64 devices; their update follows later.
+
+Each release includes a [`SHA256SUMS`](../../releases/download/v0.2.64/SHA256SUMS) file ([mirror](https://download.dirently.com/v0.2.64/SHA256SUMS)). The Mac package is still 0.2.63: check it against the [0.2.63 `SHA256SUMS`](../../releases/download/v0.2.63/SHA256SUMS) ([mirror](https://download.dirently.com/v0.2.63/SHA256SUMS)). To check a download:
 
 - **Windows (PowerShell):** `Get-FileHash .\Dirently-Setup-<version>.exe`
 - **macOS:** `shasum -a 256 Dirently-<version>-arm64.pkg`
@@ -38,7 +40,7 @@ Compare the result with the matching line in `SHA256SUMS`.
 
 **Edge says the installer "isn't commonly downloaded"?** Hover over the download, click **…** → **Keep**, then **Show more** → **Keep anyway**.
 
-**Windows shows "Windows protected your PC"?** The beta installer is not code-signed yet. Click **More info**, then **Run anyway**.
+**Windows shows "Windows protected your PC"?** The beta installer is not code-signed. Click **More info**, then **Run anyway**.
 
 ## Getting started
 
@@ -48,6 +50,8 @@ Compare the result with the matching line in `SHA256SUMS`.
 4. Your devices now see each other. Pick one and click **Connect**.
 
 Computers share themselves by default, so you can connect to them right away (you can turn this off on the computer's own card). Everyone in a group can see its devices, so only give the password to people you trust.
+
+**Updates:** from 0.2.64 on, Dirently for Windows and Android can update itself. In **Settings → Updates** (Windows: **Settings → General**): **Notify only** (the default) shows a banner when a new version is out, **Automatic** installs it when nobody is connected (Android asks you to confirm), and **Never notify** shows no new-version notices except for security updates. **Check for updates** and **Update now** are always there. On Windows, if the version you run has a security problem that must be fixed, the update installs by itself when nobody is connected and the computer is idle, whichever you chose. The Mac and iPhone/iPad apps get their own update settings in a later update. Older versions keep connecting, so you can update when it suits you.
 
 The **[user guide](GUIDE.md)** covers installing on each platform (including iPhone and iPad), Mac permissions, the in-session menu, the phone shortcut bar, connection problems and uninstalling.
 
@@ -74,6 +78,7 @@ The **[user guide](GUIDE.md)** covers installing on each platform (including iPh
 - **No account:** no email and no sign-up.
 - **Stored by the service:** only what it needs to introduce your devices, such as device and group identities.
 - **Logs:** the service's security logs are deleted after **30 days**. Details are in the [Privacy Policy](PRIVACY.md).
+- **Update checks:** the app asks download.dirently.com which version is the latest. The request carries no device ID, name or group.
 - **Your data:** screen content, audio, keystrokes and files never pass through our servers.
 
 Only connect to your own or your team's computers. Never install Dirently, join a group or turn on sharing because a stranger asked you to.
