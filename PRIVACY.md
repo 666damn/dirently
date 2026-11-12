@@ -1,6 +1,6 @@
 # Dirently Privacy Policy
 
-Effective date: 12 November 2026
+Effective date: 13 November 2026
 
 This policy explains what information the developer of Dirently, based in Western Australia, Australia ("we", "us"), handles when you use the Dirently apps, the Dirently coordination service and dirently.com.
 
@@ -19,10 +19,10 @@ The coordination service helps your devices find each other and set up a connect
 | Device identity: a randomly generated device ID and public key, device name, platform, app version | Identify the device and show it to your group | In memory while the device is online |
 | Network addresses: source IP, public port, local IPv4 addresses | Set up a direct connection between two devices | In memory while online or in a session; shared only with the device you connect to |
 | Status: displays, stream settings, frame rate, bitrate, latency | Pick suitable settings and show them to both sides of a session | In memory while online |
-| Group data: group name, members' device IDs and names, roles, online/offline times, wrong-password counts, bans | Groups, permissions and protection against password guessing | Stored on the server. A group is deleted after all its members have been offline for 3 days; a member's details are removed when they leave |
-| Device tag: a code the app calculates on your device for each group; it is different in every group | Enforce group bans | Stored on the server while you are in the group, while your application to join it waits for approval and while a ban from it lasts, and for at most 7 days after a failed attempt to join it. Deleted when none of these applies any more or the group is deleted; backup copies are overwritten over time |
-| Group password | Check group joins | Stored as a one-way hash plus an encrypted copy. The group admin and we can view the current password, so don't reuse a password from elsewhere |
-| Security and activity logs: time, event, source IP, a pseudonymous device reference | Investigate abuse and faults | 30 days, then deleted automatically (checked every hour) |
+| Group data: group name, members' device IDs and names, roles, online/offline times, wrong-password counts, bans | Groups, permissions and protection against password guessing | Stored on our servers in Australia and Hong Kong. A group is deleted after all its members have been offline for 3 days; a member's details are removed when they leave |
+| Device tag: a code the app calculates on your device for each group; it is different in every group | Enforce group bans | Stored only on our server in Australia while you are in the group, while your application to join it waits for approval and while a ban from it lasts, and for at most 7 days after a failed attempt to join it. Deleted when none of these applies any more or the group is deleted; backup copies are overwritten over time |
+| Group password | Check group joins | Stored only on our server in Australia, as a one-way hash plus an encrypted copy. The group admin and we can view the current password, so don't reuse a password from elsewhere |
+| Security and activity logs: time, event, source IP, a pseudonymous device reference | Investigate abuse and faults | Kept by each of our servers for 30 days, then deleted automatically (checked every hour) |
 | Connection results: whether each connection succeeded or failed, the category of any failure (for example a timeout, or the other device not sharing), the kind of path used (local network, direct, hole punching, UPnP, IPv6, ZeroTier), a time bracket for how long it took, and both devices' platforms | Find out which networks and device combinations fail to connect, so we can improve direct connections | Kept only as hourly totals, with no IP address, device ID or device name, and deleted after 30 days. The record used to check a report is held in memory only, for at most 30 minutes |
 
 **Device names:** on computers, the device name defaults to your computer's name. If it contains your real name, your group and we will see it. You can change it in Settings.
@@ -65,7 +65,7 @@ We don't share your information with anyone, except:
 
 ## 8. Where data is stored
 
-Our servers are in Australia. If you use Dirently from another country, including mainland China, the information above is transferred to and processed in Australia. By using Dirently you agree to this.
+Our servers are in Australia and Hong Kong. If you use Dirently from another country or region, including mainland China, the information above is transferred to and processed in Australia, and in Hong Kong when your app connects through our Hong Kong server. The group data in section 2 is kept on both servers. Group passwords and device tags are kept only in Australia. By using Dirently you agree to this.
 
 ## 9. Security
 
